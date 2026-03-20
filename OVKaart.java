@@ -15,14 +15,26 @@ public class OvKaart {
 		this.geldigheid = geldigheid;
 		this.kaartnummer = kaartnummer;
 		this.ingecheckt=ingecheckt;
-	
-	if (saldo>=10) {
-		System.out.println("Welkom aanboord");
 	}
 	
-	else {System.out.println("Niet genoeg saldo");}
+	public void inchecken(double kosten) {
+		ingecheckt=true;
+		saldo=saldo-kosten;
 	
+	
+	if (geldigheid=true) {
+		
+		if (ingecheckt=false) {
+			
+			if (saldo>kosten) {
+				
+				System.out.print("welkom aanboord");
+			}
+			else {System.out.print("Niet genoeg saldo");}
+		}
+		else {System.out.print("Kaart is al ingecheckt");}
 	}
+	else {System.out.print("Kaart is niet geldig");}
 	
 	
-}
+}}

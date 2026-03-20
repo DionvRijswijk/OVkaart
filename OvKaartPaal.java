@@ -4,5 +4,18 @@ public class OvKaartPaal {
 
 	double kosten = 10;
 	
-	OvKaartPaal ovpaal = new OvKaartPaal();
+	
+	//functie die een kaart incheckt
+	
+	public void inchecken(OvKaart saldo) {
+		saldo.inchecken(kosten);
+		ingecheckt = true;
+		saldo=saldo-kosten;
+		
+		if (saldo>=kosten) {
+			System.out.println("Welkom aanboord");}
+	}
+	{
+	
+	}
 }
