@@ -4,18 +4,33 @@ public class OvKaartPaal {
 
 	double kosten = 10;
 	
-	
-	//functie die een kaart incheckt
-	
-	public void inchecken(OvKaart saldo) {
-		saldo.inchecken(kosten);
-		ingecheckt = true;
-		saldo=saldo-kosten;
+	public OvKaartPaal(double kosten) {
+		this.kosten=kosten;
 		
-		if (saldo>=kosten) {
-			System.out.println("Welkom aanboord");}
 	}
-	{
-	
+	// functie die een kaart incheckt
+
+	public void inchecken(OvKaart kaart) {
+
+		if (kaart.getGeldigheid() == true) {
+
+			if (kaart.getIngecheckt() == false) {
+
+				if (kaart.getSaldo() > kosten) {
+
+					System.out.print("welkom aanboord");
+					
+					kaart.inchecken(kosten);
+				} else {
+					System.out.print("Niet genoeg saldo");
+				}
+			} else {
+				System.out.print("Kaart is al ingecheckt");
+			}
+		} else {
+			System.out.print("Kaart is niet geldig");
+		}
+
 	}
+
 }
