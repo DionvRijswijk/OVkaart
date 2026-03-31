@@ -2,10 +2,15 @@ package ovKaart;
 
 public class OvLocatie {
 
-	double xpos;
-	double ypos;
-	String naam;
+	private double xpos;
+	private double ypos;
+	private String naam;
 	
-	locatie lo = new locatie();
 	
+	public OvLocatie(double xpos, double ypos, String naam) {
+		this.xpos = xpos;
+		this.ypos = ypos;
+		this.naam = naam;
+		
+	}
 }
