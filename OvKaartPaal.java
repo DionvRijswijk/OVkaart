@@ -2,10 +2,18 @@ package ovKaart;
 
 public class OvKaartPaal {
 
+	
+	double nogEenLocatiex;
+	double nogEenLocatiey;
+	
 	double kosten = 10;
 	
-	public OvKaartPaal(double kosten) {
+
+	
+	public OvKaartPaal(double kosten, OvLocatie nogEenLocatie) {
 		this.kosten=kosten;
+		this.nogEenLocatiex=nogEenLocatiex;
+		this.nogEenLocatiey=nogEenLocatiey;
 		
 	}
 	// functie die een kaart incheckt

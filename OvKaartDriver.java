@@ -19,16 +19,16 @@ public class OvKaartDriver {
 		OvLocatie loc2 = new OvLocatie (3.3, 1.5, "nepland");
 		
 		OvLocatie locthis = new OvLocatie (1.0, 1.0, "nepland");
-		OvKaartPaal ovpaal = new OvKaartPaal(10);
-		OvKaartPaal ovpaal2 = new OvKaartPaal(5);
-		OvKaartPaal ovpaal3 = new OvKaartPaal(20);
-		OvKaartPaal ovpaal4 = new OvKaartPaal(15);
-		OvKaartPaal ovpaal5 = new OvKaartPaal(2);
+		OvKaartPaal ovpaal = new OvKaartPaal(10, loc);
+		double afstand = loc.afstandBerekenen(loc2);;
+		System.out.println(loc.afstandBerekenen(loc2));
+		loc.afstandBerekenen(loc2);
+		OvKaartPaal ovpaal2 = new OvKaartPaal(5, loc);
+		OvKaartPaal ovpaal3 = new OvKaartPaal(20, loc2);
+		OvKaartPaal ovpaal4 = new OvKaartPaal(15,locthis);
+		OvKaartPaal ovpaal5 = new OvKaartPaal(2, loc2);
 		
-		//A=loc1.x - nepland.x
-		//B=loc1.y - nepland.y
-		//CK= loc1 * loc1 + nepland * nepland
-		//C=math.sqrt(CK);
+		
 		
 		ovpaal.inchecken(ovk);
 		ovpaal2.inchecken(ovk2);
