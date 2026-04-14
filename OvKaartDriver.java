@@ -4,7 +4,7 @@ public class OvKaartDriver {
 
 	public static void main(String[] args) {
 
-		OvKaart ovk = new OvKaart(12, true, 3422, false);
+		OvKaart ovk = new OvKaart(0, true, 3422, false);
 
 		OvKaart ovk2 = new OvKaart(6, true, 3423, false);
 		
@@ -18,23 +18,28 @@ public class OvKaartDriver {
 		
 		OvLocatie loc2 = new OvLocatie (3.3, 1.5, "nepland");
 		
+		OvLocatie loc3 = new OvLocatie (4.9, 3.4, "willikeurig persoon's huis");
+		OvLocatie loc4 = new OvLocatie (5.5, 1.0, "gekstad");
+		
 		OvLocatie locthis = new OvLocatie (1.0, 1.0, "nepland");
 		OvKaartPaal ovpaal = new OvKaartPaal(10, loc);
-		double afstand = loc.afstandBerekenen(loc2);;
-		System.out.println(loc.afstandBerekenen(loc2));
-		loc.afstandBerekenen(loc2);
+//		double afstand = loc.afstandBerekenen(loc2);;
+//		System.out.println(loc.afstandBerekenen(loc2));
+//		loc.afstandBerekenen(loc2);
 		OvKaartPaal ovpaal2 = new OvKaartPaal(5, loc);
-		OvKaartPaal ovpaal3 = new OvKaartPaal(20, loc2);
+		OvKaartPaal ovpaal3 = new OvKaartPaal(20, loc4);
 		OvKaartPaal ovpaal4 = new OvKaartPaal(15,locthis);
-		OvKaartPaal ovpaal5 = new OvKaartPaal(2, loc2);
+		OvKaartPaal ovpaal5 = new OvKaartPaal(2, loc3);
 		
 		
 		
-		ovpaal.inchecken(ovk);
-		ovpaal2.inchecken(ovk2);
-		ovpaal.inchecken(ovk2);
-		ovpaal.inchecken(ovk4);
-		ovpaal.inchecken(ovk5);
-		System.out.println(ovk2.getSaldo());
+		ovpaal5.inchecken(ovk);
+//		ovpaal2.inchecken(ovk2);
+//		ovpaal.inchecken(ovk2);
+//		ovpaal.inchecken(ovk4);
+//		ovpaal.inchecken(ovk5);
+		ovpaal.uitchecken(ovk);
+		System.out.println(ovk.getSaldo());
+		System.out.println(loc3.afstandBerekenen(loc));
 	}
 }
