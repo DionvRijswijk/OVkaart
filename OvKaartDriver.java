@@ -4,7 +4,7 @@ public class OvKaartDriver {
 
 	public static void main(String[] args) {
 
-		OvKaart ovk = new OvKaart(0, true, 3422, false);
+		OvKaart ovk = new OvKaart(33, true, 3422, false);
 
 		OvKaart ovk2 = new OvKaart(6, true, 3423, false);
 		
@@ -32,8 +32,10 @@ public class OvKaartDriver {
 		OvKaartPaal ovpaal5 = new OvKaartPaal(2, loc3);
 		
 		
+			
 		
 		ovpaal5.inchecken(ovk);
+		//System.out.println(ovk.getlocatie().getnaam());
 //		ovpaal2.inchecken(ovk2);
 //		ovpaal.inchecken(ovk2);
 //		ovpaal.inchecken(ovk4);

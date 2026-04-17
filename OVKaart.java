@@ -32,7 +32,7 @@ public class OvKaart {
 
 	public boolean getIngecheckt() {
 		// TODO Auto-generated method stub
-		return this.ingecheckt;
+		return this.locatie != null;
 	}
 
 	public boolean getGeldigheid() {

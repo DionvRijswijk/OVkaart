@@ -12,9 +12,13 @@ public class OvLocatie {
 		this.ypos = ypos;
 		this.naam = naam;
 		
-		
+	
 		
 	}
+	public String getnaam () {
+		return naam;
+	}
+	
 	public double afstandBerekenen(OvLocatie nepland) {
 		
 	
